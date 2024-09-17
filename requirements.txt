@@ -1,0 +1,12 @@
+fastapi~=0.114.0
+pandas~=2.2.2
+joblib~=1.4.2
+scikit-learn~=1.5.2
+annotated-types==0.7.0
+numpy==2.1.1
+pydantic==2.9.1
+python-multipart==0.0.9
+starlette==0.38.5
+threadpoolctl==3.5.0
+typing==3.7.4.3
+uvicorn==0.30.6
