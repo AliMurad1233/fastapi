@@ -6,12 +6,12 @@ import os
 from app.core.file_cleanup import delete_old_files
 import threading
 import time
+from app.loc_variables import model_directory
+
 
 
 router = APIRouter()
 
-model_file = "/Users/alimurad/my_fastAPI:/temp_file/"
-model_directory = "/Users/alimurad/my_fastAPI:/app/models_saved/"
 
 def periodic_cleanup():
     while True:
@@ -56,7 +56,7 @@ async def train_mode(
     for ext in allowed_extensions:
         file_location = f"{file_location}.{ext}"
         if os.path.exists(file_location):
-            background_tasks.add_task(train_model_async, file_location, file_name)
+            background_tasks.add_task(train_model_async,file_location, file_name)
             return {"message": "Training has started in the background", "file_name": file_name}
 
         if not os.path.exists(file_location):
@@ -74,7 +74,7 @@ async def list_models():
         models = list_saved_models(model_directory)
         return {"models": models}
     except Exception as e:
-        return {"error": str(e)}
+        raise HTTPException(status_code=404,detail= str(e))
 
 
 
