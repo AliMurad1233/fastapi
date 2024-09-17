@@ -4,35 +4,46 @@ import pandas as pd
 from sklearn.linear_model import LogisticRegression
 import joblib
 import os
+from app.loc_variables import file_path
 
-model_file = "/Users/alimurad/my_fastAPI:/temp_file/"
-file_path = "/Users/alimurad/my_fastAPI:/app/models_saved/"
 training_status = {"status": "Not Started", "details": "", "progress": 0}
 
 
-async def train_model_async(file_location: str, file_name:str):
+def calculate_max_iter(n_samples: int, n_features: int) -> int:
 
+    base_iter = 100
+    sample_factor = n_samples // 100
+    feature_factor = n_features // 10
+
+    # Calculate max_iter
+    max_iter = base_iter + (sample_factor * 50) + (feature_factor * 20)
+    return max(max_iter, 100)
+
+
+async def train_model_async(file_location: str, file_name: str):
     global training_status
     training_status["status"] = "In Progress"
+    training_status["progress"] = 0
 
     try:
         df = pd.read_csv(file_location)
         X_train, y_train = preprocess_data(df)
-        model = LogisticRegression(max_iter=100000)
 
-        for i in range(1,11):
-            model.set_params(max_iter=i * 100)
-            model.fit(X_train, y_train)
-            training_status["progress"] = i * 10
+        n_samples, n_features = X_train.shape
+        max_iter = calculate_max_iter(n_samples, n_features)
 
-        formated_date = date_format()
-        joblib.dump(model, f"{file_path}_{file_name}_{formated_date}.joblib")
 
-        print(f"Model training complete. Model saved at {file_path}")
+        model = LogisticRegression(max_iter=max_iter)
+        model.fit(X_train, y_train)
+
+        # Update progress
         training_status["progress"] = 100
-
         training_status["status"] = "Completed"
-        training_status["details"] = f"Model saved at {file_path}"
+
+        formatted_date = date_format()
+        joblib.dump(model, f"{file_path}_{file_name}_{formatted_date}.joblib")
+        print(f"Model training complete. Model saved at {file_path}")
+
     except Exception as e:
         training_status["status"] = "Failed"
         training_status["details"] = str(e)

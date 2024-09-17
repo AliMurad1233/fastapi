@@ -12,7 +12,6 @@ def preprocess_data(df: pd.DataFrame):
     X = df[['Pclass', 'Sex', 'Age', 'Fare', 'Embarked']]
     y = df['Survived']
 
-    # Preprocessing: One-hot encode categorical variables
     numeric_features = ['Age', 'Fare']
     categorical_features = ['Pclass', 'Sex', 'Embarked']
 
