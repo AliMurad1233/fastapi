@@ -12,5 +12,5 @@ def delete_old_files(directory: str, days_old: int):
             file_age = os.path.getmtime(model_file)
             if file_age < cutoff:
                 os.remove(model_file)
-                print(f"Deleted old file: {model_file}")
+                
 
