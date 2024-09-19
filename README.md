@@ -19,3 +19,15 @@ FastAPI is fast web framework used for building APIs, I went with it because it'
 ## reference for what to expect
 - You should have this file structure format after opening the repository
 - <img width="473" alt="Screenshot 2024-09-19 at 12 43 20 PM" src="https://github.com/user-attachments/assets/492928e9-e86c-4dc0-84c7-c1439cc3caaa">
+
+- After running the "uvicorn" line, in the response you should get a line similar to this 
+- <img width="528" alt="Screenshot 2024-09-19 at 12 48 07 PM" src="https://github.com/user-attachments/assets/43683c7d-ab6e-45df-8d3b-baa1a92f6fde">
+
+- After clicking on the link, you will open a localhost, go to the localhost's URL and add the "docs"
+- <img width="354" alt="Screenshot 2024-09-19 at 12 52 04 PM" src="https://github.com/user-attachments/assets/b732f710-dbf0-440d-a6f8-447009270788">
+
+- Finally, you will find yourself at the Swagger IU documentary, where you can test the project
+- <img width="354" alt="Screenshot 2024-09-19 at 12 52 04 PM" src="https://github.com/user-attachments/assets/60dd5a1d-f639-4ee9-9943-2c07a60a61d4">
+
+
+
