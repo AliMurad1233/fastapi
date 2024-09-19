@@ -27,7 +27,8 @@ FastAPI is fast web framework used for building APIs, I went with it because it'
 - <img width="354" alt="Screenshot 2024-09-19 at 12 52 04 PM" src="https://github.com/user-attachments/assets/b732f710-dbf0-440d-a6f8-447009270788">
 
 - Finally, you will find yourself at the Swagger IU documentary, where you can test the project
-- <img width="354" alt="Screenshot 2024-09-19 at 12 52 04 PM" src="https://github.com/user-attachments/assets/60dd5a1d-f639-4ee9-9943-2c07a60a61d4">
+- <img width="1440" alt="Screenshot 2024-09-19 at 12 53 38 PM" src="https://github.com/user-attachments/assets/c9685105-5d3e-403b-a334-3c7f963f47f6">
+
 
 
 
