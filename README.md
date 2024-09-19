@@ -1,4 +1,4 @@
-# First-FastAPI-Project
+# Model-Training-API-On-Titanic-Dataset
 
 ## A Quick Walk Through The Project
 
