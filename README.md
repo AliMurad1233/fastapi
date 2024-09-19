@@ -16,10 +16,6 @@ FastAPI is fast web framework used for building APIs, I went with it because it'
 - Enter the following line "uvicorn app.main:app --reload" to get the project running
 - Finally, click the localhost path and add /docs to load it in swagger IU to test it
 
-## Prerequisites
-
-- Python 3.8+
-- FastAPI
-- Joblib
-- Pandas
-- Uvicorn (for running the app)
+## reference for what to expect
+- You should have this file structure format after opening the repository
+- <img width="473" alt="Screenshot 2024-09-19 at 12 43 20 PM" src="https://github.com/user-attachments/assets/492928e9-e86c-4dc0-84c7-c1439cc3caaa">
