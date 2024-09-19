@@ -1,4 +1,4 @@
-# Model Training API On Titanic Dataset
+# Model Training API On The Titanic Dataset
 
 ## A Quick Walk Through The Project
 
