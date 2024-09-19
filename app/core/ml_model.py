@@ -1,4 +1,4 @@
-from app.data_preprocessing.data_preprocessing import preprocess_data
+from app.data.preprocessing_titanic_data import preprocess_data
 from utilities.operations import date_format
 import pandas as pd
 from sklearn.linear_model import LogisticRegression

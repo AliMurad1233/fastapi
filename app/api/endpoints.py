@@ -3,7 +3,7 @@ from app.core.ml_model import train_model_async,training_status, list_saved_mode
 from fastapi import APIRouter, File, UploadFile, HTTPException
 from fastapi.responses import JSONResponse
 import os
-from app.core.file_cleanup import delete_old_files
+from utilities.operations import delete_old_files
 import threading
 import time
 from app.loc_variables import model_directory
